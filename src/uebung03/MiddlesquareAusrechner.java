@@ -17,3 +17,4 @@ public class MiddlesquareAusrechner {
         }
     }
 }
+//test für git
