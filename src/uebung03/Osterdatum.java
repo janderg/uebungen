@@ -17,8 +17,8 @@ public class Osterdatum {
             System.out.println("Ostern war im Jahre " + j + " am " + apriltag + ". April.");
         }
         else {
-            int märztag = 22 + d + e;
-            System.out.println("Ostern war im Jahre " + j + " am " + märztag + ". März.");
+            int maerztag = 22 + d + e;
+            System.out.println("Ostern war im Jahre " + j + " am " + maerztag + ". März.");
         }
     }
 
