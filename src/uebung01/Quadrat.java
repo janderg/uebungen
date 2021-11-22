@@ -10,14 +10,10 @@ public class Quadrat {
         if (n < 0){ //Wenn die Eingabe negativ ist, wird sie * -1 genommen, damit diese in der Rechnung richtig funktioniert
             n *=-1;
         }
-        for (int i=1; i<=n*n; i+=2){ // Es wird eine temporäre Variable i erstellt, wenn diese kleiner als die Quadratzahl aus n ist, wird sie um 2 erhöht
+        for (int i=1; i<=n*2; i+=2){ // Es wird eine temporäre Variable i erstellt, wenn diese kleiner als die Quadratzahl aus n ist, wird sie um 2 erhöht
             sum += i;
             y += 1;
-            System.out.println("Die " + y + ". ungerade Zahl ist " + i);   
-
-            if (y == n){ //Wenn y die Anzahl an n erreicht hat hört die Schleife auf
-                break;
-            }
+            System.out.println("Die " + y + ". ungerade Zahl ist " + i);
         }    
 
         if (b < 0){ 
