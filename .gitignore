@@ -1,4 +1,5 @@
 # Project exclude paths
 /out/
+/src/javacourse/
+/lib/
 /.idea/
-java.iml

@@ -1,8 +1,12 @@
 package uebung04;
+
+import java.util.Scanner;
+
 public class Lieblingszahl {
     public static void main(String[] args) {
+        Scanner keyboard = new Scanner(System.in);
         System.out.println("Rate deine Lieblingszahl :)");
-        int a = StdIn.readInt();
+        int a = keyboard.nextInt();
         if (a <= 1000) {
             if (a % 6 == 0) {
                 if (a % 7 == 0) {

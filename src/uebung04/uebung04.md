@@ -4,15 +4,12 @@
 **1.**
 
 **a)**
-
 5 Bits; $log_2(22) = ~4.459$
 
-**b)** 
-
+**b)**
 4 Bits; $log_2(11) = ~3.459$
 
 **c)**
-
 Weniger Bits werden benötigt für die Kodierung, also wird mehr Rechenleistung gespart.
 
 **2.**
@@ -26,7 +23,9 @@ Weniger Bits werden benötigt für die Kodierung, also wird mehr Rechenleistung 
 **d)** Die Glyphen, außer die '-Glyphe werden als Tripletts zusammengenommen $rarr 21/3=7$ und die Zahlzeichen 
 werden mit der '-Glyphe kodiert $rarr 4*2=8$; $7+8=15$, also $log_2(15) = ~3.907$ 4 Bits
 
-**e)** Es wird anstatt bei **d)** nur 4 Bits benötigt, was wieder weniger Rechenleistung beansprucht.
+**e)** Es wird anstatt bei 
+
+**d)** nur 4 Bits benötigt, was wieder weniger Rechenleistung beansprucht.
 
 ---
 
@@ -56,4 +55,4 @@ jeweils mit einer Beschreibung des Fehlers.
 
 Von den vorstehenden Codezeilen akzeptiert der Java-Compiler die Zeile 3 nicht, weil die Zahl zu groß für 'long' ist.
 
-Die anderen Zeilen sind richtig, weil n4 wird zu $3e7$ gekürzt.  
+Die anderen Zeilen sind richtig, weil alle noch im möglichen Wertebreich der verschiedenen Integer liegen.  
