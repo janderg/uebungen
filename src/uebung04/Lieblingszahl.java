@@ -1,32 +1,21 @@
 package uebung04;
 
-import java.util.Scanner;
-
 public class Lieblingszahl {
     public static void main(String[] args) {
-        Scanner keyboard = new Scanner(System.in);
-        System.out.println("Rate deine Lieblingszahl :)");
-        int a = keyboard.nextInt();
-        if (a <= 1000) {
-            if (a % 6 == 0) {
-                if (a % 7 == 0) {
-                    if (a % 4 > 0) {
-                        int c = 0;
-                        int b = a;
-                        while (b != 0) {
-                            c += (b % 10);
-                            b /= 10;
-                        }
-                        if (c == 6) {
-                            System.out.println("Richtig! " + a +" ist deine Lieblingszahl");
-                        } else Error(a);
-                    } else Error(a);
-                } else Error(a);
-            } else Error(a);
-        }else Error(a);
+        for (int i = 1; i <= 1000; i++) {
+            if (i % 6 == 0 && i % 7 == 0 && i % 4 != 0 && quersumme(i) == 6) {
+                System.out.println("Meine Lieblingszahl ist: "+i);
+            }
+        }
     }
 
-    public static void Error(int a) {
-        System.out.println("Falsch! " + a + " ist nicht meine Lieblingszahl");
+    private static int quersumme(int number) {
+        int x = number;
+        int sum = 0;
+        while (x > 0) {
+            sum += x % 10;
+            x = x / 10;
+        }
+        return sum;
     }
 }

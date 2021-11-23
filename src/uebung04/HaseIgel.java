@@ -1,6 +1,7 @@
 package uebung04;
 
 public class HaseIgel {
+    int a = 14;
     public static void main(String[] args) {
         long a = 0xFFFF;
         long b = a;
@@ -14,5 +15,15 @@ public class HaseIgel {
             }
             System.out.println("Länge: " + (i + 1) + " \t | Ergebnis: " + a);
         }
+
+    }
+    public static int Hase(int hase){
+
+        for (int i = 0; i<= 100; i+++){
+            HaseIgel(a);
+        }
+
+
+        return hase;
     }
 }

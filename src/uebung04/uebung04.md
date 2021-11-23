@@ -14,18 +14,16 @@ Weniger Bits werden benötigt für die Kodierung, also wird mehr Rechenleistung 
 
 **2.**
 
-**a)** 5 Bits; $log_2(29) = ~4.858$
+**a)** 5 Bits; $log_2(26) = 4.7$
 
-**b)** 5 Bits; $log_2(19) = ~4.248$
+**b)** 4 Bits; $log_2(16) = 4$
 
-**c)** Gleiche Bitanzahl, aber weniger Möglichkeiten.
+**c)** ?
 
 **d)** Die Glyphen, außer die '-Glyphe werden als Tripletts zusammengenommen $rarr 21/3=7$ und die Zahlzeichen 
-werden mit der '-Glyphe kodiert $rarr 4*2=8$; $7+8=15$, also $log_2(15) = ~3.907$ 4 Bits
+werden mit der '-Glyphe kodiert + '-Glyphe $rarr 4$; $7+4+1=12$, also $log_2(12) = ~3.585$ = 4 Bits
 
-**e)** Es wird anstatt bei 
-
-**d)** nur 4 Bits benötigt, was wieder weniger Rechenleistung beansprucht.
+**e)** Es wird anstatt bei a) nur 4 Bits benötigt, was wieder weniger Rechenleistung beansprucht.
 
 ---
 
@@ -42,8 +40,8 @@ Nachfolgend sind die drei der vorstehenden Codezeilen aufgelistet,
 die der Java-Compiler nicht akzeptiert,
 jeweils mit einer Beschreibung des Fehlers.
 
-* Zeile 1 , Fehler: Integer number to long
-* Zeile 2 , Fehler: Integer number to long
+* Zeile 1 , Fehler: Integer number to large
+* Zeile 2 , Fehler: Integer number to large
 * Zeile 4 , Fehler: Wrong data type > float
 
 ### Casting-Show (I1-ID: b9ej9071yii0)
