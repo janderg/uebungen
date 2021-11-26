@@ -7,23 +7,23 @@
 5 Bits; $log_2(22) = ~4.459$
 
 **b)**
-4 Bits; $log_2(11) = ~3.459$
+9 Bits; $22^2 = 484$; $log_2(484) = ~8.919$ 
 
 **c)**
-Weniger Bits werden benötigt für die Kodierung, also wird mehr Rechenleistung gespart.
+Ein Wort mit 8 Glyphen mit der Methode aus a) ist ($8 * 5 = 40$) 40 Bits lang, mit Methode b) bräuchte man nur ($4*9 = 36$) 36 Bits.
 
 **2.**
 
 **a)** 5 Bits; $log_2(26) = 4.7$
 
-**b)** 4 Bits; $log_2(16) = 4$
+**b)** 9 Bits; $21+5=488$; $log_2(488) = 8.931$ 
 
-**c)** ?
+**c)** Bei einem Wort mit 7 Glyphen + '- Glyphe wäre man mit der Methode aus a) bei ($8 * 5= 4$) 40 Bits und mit der Methode aus b nur $4*9 +1= 36$) 36 Bits. 
+Wenn jedoch nach dem Wort noch eine Zahl mit 6 Ziffern steht, dann bräuchte man mit a) 
 
-**d)** Die Glyphen, außer die '-Glyphe werden als Tripletts zusammengenommen $rarr 21/3=7$ und die Zahlzeichen 
-werden mit der '-Glyphe kodiert + '-Glyphe $rarr 4$; $7+4+1=12$, also $log_2(12) = ~3.585$ = 4 Bits
-
-**e)** Es wird anstatt bei a) nur 4 Bits benötigt, was wieder weniger Rechenleistung beansprucht.
+**d)** $22^3+5^2=10689$, also $log_2(10689) = ~13.384$ = 14 Bits
+TODO: Neue Erklärung schreiben
+**e)** 
 
 ---
 
@@ -38,11 +38,11 @@ werden mit der '-Glyphe kodiert + '-Glyphe $rarr 4$; $7+4+1=12$, also $log_2(12)
 
 Nachfolgend sind die drei der vorstehenden Codezeilen aufgelistet,
 die der Java-Compiler nicht akzeptiert,
-jeweils mit einer Beschreibung des Fehlers.
+jeweils mit einer Beschreibung des Fehlers. TODO: Fehler erklären
 
-* Zeile 1 , Fehler: Integer number to large
-* Zeile 2 , Fehler: Integer number to large
-* Zeile 4 , Fehler: Wrong data type > float
+* Zeile 1 , Fehler: Integer number to large: Die Zahl ist zu groß für int.
+* Zeile 2 , Fehler: Integer number to large: Die Zahl ist zu groß für long.
+* Zeile 4 , Fehler: Wrong data type > float: Die Zahl ist ein float, wird aber vom Compiler als long gelesen. Muss also sie noch in ein long gecastet werden.
 
 ### Casting-Show (I1-ID: b9ej9071yii0)
 
@@ -53,4 +53,7 @@ jeweils mit einer Beschreibung des Fehlers.
 
 Von den vorstehenden Codezeilen akzeptiert der Java-Compiler die Zeile 3 nicht, weil die Zahl zu groß für 'long' ist.
 
-Die anderen Zeilen sind richtig, weil alle noch im möglichen Wertebreich der verschiedenen Integer liegen.  
+Die anderen Zeilen sind richtig, weil...
+* n1: f steht für float, damit wird dem Compiler gesagt, dass die Zahl ein float sein soll. Die wird wiederum direkt zum int wieder umgewandelt.  Ausgabe: 3000000 (keinen wirklichen Nutzen in dem Fall)
+* n2: Die Zahl ist eigentlich ein double wird aber in ein int gewandelt. Ein Compiler zeigt daher den maximalen positiven Wert (2147483647) von einem int an. 
+* n4: Das e0 fässt die Nachkomme stellen zusammen, sodass der Compiler 3.0E7 ausgibt. 

@@ -1,29 +1,30 @@
 package uebung04;
 
+import java.util.Scanner;
+
 public class HaseIgel {
-    int a = 14;
     public static void main(String[] args) {
-        long a = 0xFFFF;
-        long b = a;
-        long na = a;
+        Scanner keyboard = new Scanner(System.in);
+        long eingabe = Integer.getInteger(args[0]);
+        long hase = eingabe;
+        long igel = eingabe;
+        while (hase == igel) {
+            for (int i = 0x0000; i <= 0xFFFF; i += 0x0001) {
+                igel *= igel;
+                igel = igel / 0x0100 % 0x1000;
 
-        for (int i = 0; i <= 0x100; i++) {
-            a *= a;
-            a = a / 10000 % 100;
-            if (i==0){
-                System.out.println("Länge: 0\t | Ergebnis: " + b);
+
             }
-            System.out.println("Länge: " + (i + 1) + " \t | Ergebnis: " + a);
+            for (int i = 0x0000; i <= 0xFFFF; i += 0x0002) {
+                hase *= hase;
+                hase = hase / 0x0100 % 0x1000;
+
+
+            }
+            System.out.println("Hase: " + hase + "\t| Igel: " + igel);
+            if (hase == igel) {
+                break;
+            }
         }
-
-    }
-    public static int Hase(int hase){
-
-        for (int i = 0; i<= 100; i+++){
-            HaseIgel(a);
-        }
-
-
-        return hase;
     }
 }
