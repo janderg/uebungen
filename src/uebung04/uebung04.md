@@ -4,26 +4,28 @@
 **1.**
 
 **a)**
-5 Bits; $log_2(22) = ~4.459$
+<u>5 Bits</u>; $log_2(22) = ~4.459 rarr 9$
 
 **b)**
-9 Bits; $22^2 = 484$; $log_2(484) = ~8.919$ 
+<u>9 Bits</u>; $22^2 = 484$; $log_2(484) = ~8.919 rarr 9$ 
 
 **c)**
-Ein Wort mit 8 Glyphen mit der Methode aus a) ist ($8 * 5 = 40$) 40 Bits lang, mit Methode b) bräuchte man nur ($4*9 = 36$) 36 Bits.
+Ein Wort mit 8 Glyphen mit der Methode aus a) ist ($8 * 5 = 40$) 40 Bits lang, mit Methode b) bräuchte man nur ($4*9 = 36$) 36 Bits. 
+Was Rechenleistung schonen würde.
 
 **2.**
 
-**a)** 5 Bits; $log_2(26) = 4.7$
+**a)** <u>5 Bits</u>; $log_2(26) = 4.7 rarr 5$
 
-**b)** 9 Bits; $21+5=488$; $log_2(488) = 8.931$ 
+**b)** <u>9 Bits</u>; $22^2-22-2+4+1=465$; $log_2(465) = 8.861 rarr 9$. 
 
-**c)** Bei einem Wort mit 7 Glyphen + '- Glyphe wäre man mit der Methode aus a) bei ($8 * 5= 4$) 40 Bits und mit der Methode aus b nur $4*9 +1= 36$) 36 Bits. 
-Wenn jedoch nach dem Wort noch eine Zahl mit 6 Ziffern steht, dann bräuchte man mit a) 
+**c)** Wenn man einen Text nur aus Zahlen und '-Glyphe hat, wäre die Codierung a) besser als b), weil a) weniger Bits benötigen würde.
 
-**d)** $22^3+5^2=10689$, also $log_2(10689) = ~13.384$ = 14 Bits
-TODO: Neue Erklärung schreiben
+**d)** $22^3-22^2+5^2-5-2=10182$, also $log_2(10182) = ~13.314 rarr 14$ = 14 Bits
+
 **e)** 
+* Mit a): $5*2 = 10$ 
+* Mit b): $14 * 1/3 = 4,6$
 
 ---
 
@@ -38,7 +40,7 @@ TODO: Neue Erklärung schreiben
 
 Nachfolgend sind die drei der vorstehenden Codezeilen aufgelistet,
 die der Java-Compiler nicht akzeptiert,
-jeweils mit einer Beschreibung des Fehlers. TODO: Fehler erklären
+jeweils mit einer Beschreibung des Fehlers.
 
 * Zeile 1 , Fehler: Integer number to large: Die Zahl ist zu groß für int.
 * Zeile 2 , Fehler: Integer number to large: Die Zahl ist zu groß für long.
@@ -54,6 +56,6 @@ jeweils mit einer Beschreibung des Fehlers. TODO: Fehler erklären
 Von den vorstehenden Codezeilen akzeptiert der Java-Compiler die Zeile 3 nicht, weil die Zahl zu groß für 'long' ist.
 
 Die anderen Zeilen sind richtig, weil...
-* n1: f steht für float, damit wird dem Compiler gesagt, dass die Zahl ein float sein soll. Die wird wiederum direkt zum int wieder umgewandelt.  Ausgabe: 3000000 (keinen wirklichen Nutzen in dem Fall)
-* n2: Die Zahl ist eigentlich ein double wird aber in ein int gewandelt. Ein Compiler zeigt daher den maximalen positiven Wert (2147483647) von einem int an. 
-* n4: Das e0 fässt die Nachkomme stellen zusammen, sodass der Compiler 3.0E7 ausgibt. 
+* n1: Die Zahl ist eigentlich ein double wird aber in ein int gewandelt. Ein Compiler zeigt daher den maximalen positiven Wert (2147483647) von einem int an.
+* n2: f steht für float, damit wird dem Compiler gesagt, dass die Zahl ein float sein soll. Die wird wiederum direkt zum int wieder umgewandelt.  Ausgabe: 3000000 (keinen wirklichen Nutzen in dem Fall)
+* n4: Das e0 fässt die Nullen zusammen, sodass der Compiler 3.0E7 ausgibt. Die Zahl ist 57083918398 was für ein int zu groß wäre.
