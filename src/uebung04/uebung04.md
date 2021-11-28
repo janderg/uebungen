@@ -24,8 +24,8 @@ Was Rechenleistung schonen würde.
 **d)** $22^3-22^2+5^2-5-2=10182$, also $log_2(10182) = ~13.314 rarr 14$ = 14 Bits
 
 **e)** 
-* Mit a): $5*2 = 10$ 
-* Mit b): $14 * 1/3 = 4,6$
+* Mit a): $5*2 = 10$ = <u>10 Bits</u>
+* Mit b): $14 * 1/3 = 4,6 rarr 5$ = <u>5 Bits</u>
 
 ---
 
