@@ -1,19 +1,30 @@
 package uebung04;
 
-import java.util.Scanner;
-
 public class HaseIgel {
     public static void main(String[] args) {
-        Scanner keyboard = new Scanner(System.in);
-        System.out.println("Bidde 4-stellige Hexadezimalzahl eingeben: ");
-        long eingabe = Long.decode(keyboard.next());
-        System.out.println(eingabe);
-        //TODO: Eingabe zu hex machen
+        int startwerte = 0;
         for (int i = 0x0000; i <= 0xFFFF; i += 0x0001) {
-            eingabe *= eingabe;
-            eingabe = eingabe / 0x0100 % 0x1000;
-            String hex = Integer.toHexString((int) eingabe);
-            System.out.println(hex);
+            long hase = i, igel = i; //aktualisieren von Hase und Igel
+            String hex = Long.toHexString(i);
+            hex = hex.toUpperCase();
+
+            for (int j = 0x0000; j <= 0x10000; j += 0x0001) {
+                igel = middleSquare(igel); //Igel aktualisieren
+                hase = middleSquare(hase);
+                hase = middleSquare(hase); //Hase aktualisieren
+                if (hase == 0x0000) break;
+                if (igel == hase) {
+                    System.out.println("Startwert in Hexadezimal: 0x" + hex); //Startwert ausgeben
+                    startwerte++;
+                    break;
+                }
+            }
         }
+        System.out.println("Es gibt " + startwerte + " Startwerte");
+    }
+
+    private static long middleSquare(long var) {
+        var *= var;
+        return var / 0x100 % 0x10000;
     }
 }

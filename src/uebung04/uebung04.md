@@ -21,7 +21,7 @@ Was Rechenleistung schonen würde.
 
 **c)** Wenn man einen Text nur aus Zahlen und '-Glyphe hat, wäre die Codierung a) besser als b), weil a) weniger Bits benötigen würde.
 
-**d)** $22^3-22^2+5^2-5-2=10182$, also $log_2(10182) = ~13.314 rarr 14$ = 14 Bits
+**d)** $22^3-22^2+1+5^2-5-2=10182$, also $log_2(10183) = ~13.314 rarr 14$ = 14 Bits
 
 **e)** 
 * Mit a): $5*2 = 10$ = <u>10 Bits</u>
