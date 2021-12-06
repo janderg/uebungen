@@ -1,4 +1,4 @@
-# **Informatik I, Übung 04**
+# **Informatik I, Übung 05**
 ## **Polynomfunktion**
 ### **1.**
     q = a [0];
@@ -9,22 +9,22 @@
     q = a[i] * potenz + q;
     }
     return q;
-    
-Addition: n
 
-Multiplikation: $n+sum_(i=1)^n i*i$
-### **2.** 
-a)
+**Addition:** $n$
+
+**Multiplikation:** $n+sum_(i=1)^n i*i$
+### **2.**
+**a)**
 
 $q =(...((a_n)x^((n^2)-(n-1)^2)+a_(n-1))x^((n-1)^2-(n-2)^2)+...)x^(1^2)+a_0 $
 
-b)
+**b)**
 
-Die Potenzen von x können in einem Array mit größe N gespeichert werden und die Potenzen selbst durch: $Potenz[n] = 1 + n*2 + Potenz[n-1]$ berechnet werden.
+Die Potenzen von $x$ können in einem Array der Größe $N$ gespeichert werden und die Potenzen selbst durch $"Potenz"[n] = 1 + n*2 + "Potenz"[n-1]$ berechnet werden.
 
-c)
+**c)**
 
-Eingabe: Koefizienten: a[n],..,a[o] und $x$
+**Eingabe:** Koefizienten: `a[n],..,a[0]` und `x`
 
     Array [n] exp;
     q = a [n];
@@ -36,17 +36,23 @@ Eingabe: Koefizienten: a[n],..,a[o] und $x$
     }
     return q;
 
-d)
+**d)**
 
-2n Additionen, 2n Multiplikationen
+**Addition:** $2$
+
+**Multiplikation:** $2$
 ### **3.**
 **a)**
 
-$x^(n * (n + 1) * (2 * n + 1) / 6)$
+$m = n$
+
+Falls $x = 0$; $x^(0^2) = 1$
+
+Falls $x > 0$; $x^n = x^(2*m-1) * x^(n-1), x^(n-1) = x^(2*(m-1)-1) * x^(n-2),...,x^1 = x^(2*1-1)$ * x^0
 
 **b)**
 
-Eingabe: Argument x, n ($n > 0$)
+**Eingabe:** Argumente `x`, `n` ($n > 0$)
 
     long pow = (n * (n + 1) * (2 * n + 1) / 6);
     long q = 1;
@@ -55,6 +61,6 @@ Eingabe: Argument x, n ($n > 0$)
 
 **c)**
 
-Addition: 2
+**Addition:** $2$
 
-Multiplikation: (n * (n + 1) * (2 * n + 1) / 6) + 3
+**Multiplikation:** $(n * (n + 1) * (2 * n + 1) / 6) + 3$
