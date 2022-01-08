@@ -1,4 +1,7 @@
 package uebung03;
+
+import uebung07.StdIn;
+
 public class Osterdatum {
     public static void main (String [] args){
         System.out.print("Bidde die Jahreszahl eingeben: ");

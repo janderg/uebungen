@@ -1,4 +1,4 @@
-package uebung03;
+package uebung06;
 /******************************************************************************
  *  Compilation:  javac StdOut.java
  *  Execution:    java StdOut
@@ -7,6 +7,8 @@ package uebung03;
  *  Writes data of various types to standard output.
  *
  ******************************************************************************/
+
+import uebung07.StdIn;
 
 import java.io.OutputStreamWriter;
 import java.io.PrintWriter;

@@ -1,4 +1,4 @@
-package uebung03;
+package uebung06;
 /******************************************************************************
  *  Compilation:  javac StdIn.java
  *  Execution:    java StdIn   (interactive test of basic functionality)
@@ -8,11 +8,9 @@ package uebung03;
  *
  ******************************************************************************/
 
-import java.util.ArrayList;
-import java.util.InputMismatchException;
-import java.util.Locale;
-import java.util.NoSuchElementException;
-import java.util.Scanner;
+import uebung07.StdOut;
+
+import java.util.*;
 import java.util.regex.Pattern;
 
 /**

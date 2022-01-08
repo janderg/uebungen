@@ -1,4 +1,7 @@
 package uebung03;
+
+import uebung07.StdIn;
+
 public class ISBN10 {
     public static void main(String[] args) {
 

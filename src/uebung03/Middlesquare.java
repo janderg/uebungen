@@ -1,4 +1,8 @@
 package uebung03;
+
+import uebung07.StdIn;
+import uebung07.StdOut;
+
 public class Middlesquare {
     public static void main (String[] args){
         System.out.print("Geben Sie eine zweistellige, positive Zahl ein: ");	
