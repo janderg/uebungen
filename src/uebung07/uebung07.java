@@ -6,25 +6,28 @@ public class uebung07 {
     public static void main(String[] args) {
         StdOut.print("Bitte geben Sie D oder R ein: ");
         char c = StdIn.readChar();
-        if (c == 'D'){ //Es wird überprüft, ob D oder R eingegeben
-            StdOut.print("Bitte geben Sie eine Zahl zwischen 0 und 20 ein: ");
-            int k = StdIn.readInt();
-            while (k < 0 || k > 20) {
-                StdOut.print("Falsche Zahl wurde eingeben!");
-                k = StdIn.readInt();
+            if (c == 'D') { //Es wird überprüft, ob D oder R eingegeben
+                StdOut.print("Bitte geben Sie eine Zahl zwischen 0 und 20 ein: ");
+                int k = StdIn.readInt();
+                while (k < 0 || k > 20) {
+                    StdOut.print("Falsche Zahl wurde eingeben!");
+                    k = StdIn.readInt();
+                }
+                char[] a = new char[(int) (Math.pow(2, (k + 1))) - 1]; //Formel für Drachenkurve
+                DragonCurve(a, k);
             }
-            char[] a = new char[(int) (Math.pow(2, (k+1))) - 1]; //Formel für Drachenkurve
-            DragonCurve(a, k);
-        }
-        else {
-            System.out.println("Bitte eine Zahl zwischen 0 und 100000 eingaben: ");
-            int eingabe = StdIn.readInt();
-            while (eingabe > 100000 || eingabe <= 0){ //Eingabe wird überprüft
-                System.out.println("Eingabe muss zwischen 0 und 100000. Neue Eingabe: ");
-                eingabe = StdIn.readInt();
+            else if (c == 'R'){
+                System.out.println("Bitte eine Zahl zwischen 0 und 100000 eingaben: ");
+                int eingabe = StdIn.readInt();
+                while (eingabe > 100000 || eingabe <= 0) { //Eingabe wird überprüft
+                    System.out.println("Eingabe muss zwischen 0 und 100000. Neue Eingabe: ");
+                    eingabe = StdIn.readInt();
+                }
+                Random(eingabe);
             }
-            Random(eingabe);
-        }
+            else {
+                System.out.println("Invalide Eingabe");
+            }
     }
     public static void Random (int z){ //Draw soll erstmal die Zeichenkette zusammenstellen
         System.out.println(z);
@@ -38,10 +41,15 @@ public class uebung07 {
         String t = "";
         int k = StdRandom.uniform(1,4);
         switch (k) { // 3 Cases, weil die Chance 1/3 ist, dass einer der drei Buchstaben dran kommt
-            case 1 -> t = "F";
-            case 2 -> t = "L";
-            case 3 -> t = "R";
-
+            case 1:
+                t = "F";
+                break;
+            case 2:
+                t = "L";
+                break;
+            case 3:
+                t = "R";
+                break;
         }
         return t;
     }
