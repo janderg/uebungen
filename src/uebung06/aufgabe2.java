@@ -1,6 +1,6 @@
 package uebung06;
 
-/*public class aufgabe2 {
+public class aufgabe2 {
     public static void main(String[] args) {
         int i = StdIn.readInt();
         StdIn.readLine();
@@ -52,7 +52,7 @@ package uebung06;
                         break;
                     case 'L':
                         if (b1 == 0) {
-                            b1 = -b2;
+                            b1 = (byte) -b2;
                             b2 = 0;
                             break;
                         }
@@ -65,7 +65,7 @@ package uebung06;
                             b2 = 0;
                             break;
                         }
-                        b2 = -b1;
+                        b2 = (byte) -b1;
                         b1 = 0;
                         break;
                     default:
@@ -76,4 +76,3 @@ package uebung06;
         }
     }
 }
-*/
